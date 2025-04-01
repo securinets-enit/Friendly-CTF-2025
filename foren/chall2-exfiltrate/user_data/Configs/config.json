@@ -1,9 +1,0 @@
-{
-    "service": "Securinets ENIT",
-    "version": "1.0.0",
-    "settings": {
-        "authentication": true,
-        "timeout": 300
-    }
-}
-
