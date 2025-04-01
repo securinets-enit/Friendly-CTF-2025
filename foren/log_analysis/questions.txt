@@ -1,0 +1,14 @@
+What is the attacker IP address?
+192.168.115.9
+What is the domain of the victim?
+chez-lebnin.com
+What is the tool used in the enumeration? (format: ****** version)
+WPScan v3.8.27
+What is the tool used for the brute force? (format: name)
+Hydra
+When did the attacker guess the password (first time)? (format: dd/Mon/yyyy HH:mm:ss)
+29/Mar/2025 23:08:58
+What is the first command executed on the system by the attacker?
+echo "H4cK3d by Lm0ud1r"
+What is the path of the file exfiltrated by the attacker? (format /******/******.**)
+/backup/secret.db
