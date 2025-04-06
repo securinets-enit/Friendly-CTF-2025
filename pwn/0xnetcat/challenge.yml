@@ -1,0 +1,20 @@
+name: "Netcat"
+author: "SigmA4"
+category: pwn
+description: |-
+ Isn't it that obvious?
+
+ nc 51.77.140.155 10001
+
+
+ **author**:SigmA4
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 20
+  minimum: 10
+flags:
+  - SecurinetsENIT{W3lC0M3_T0_B1n4rY_Expl0tAT10N}
+state: visible
+version: "0.1"

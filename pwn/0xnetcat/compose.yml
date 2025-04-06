@@ -1,0 +1,14 @@
+version: '3'
+services:
+  challenge:
+    container_name: netcat
+    build:
+      context: ./challenge
+      dockerfile: Dockerfile
+    ports:
+      - 10001:10001
+    read_only: true
+    cap_drop:
+      - all
+              
+    restart: on-failure
