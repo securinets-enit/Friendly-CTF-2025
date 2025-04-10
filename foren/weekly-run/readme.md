@@ -1,6 +1,6 @@
 # Weekly Run
-"Man is what he is, because of his routine." Galadima Dostoevsky
+"Man is what he is, because of his routine." Fyodor salamanki Dostoevsky
 
 **Difficulty: Easy**
 
-**Author: galadima**
+**Author: salamanki**
