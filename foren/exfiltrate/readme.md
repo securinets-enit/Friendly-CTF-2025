@@ -5,4 +5,4 @@ A rookie hacker gained access to one of the company's hosts and exfiltrated some
 
 
 
-**Author:** galadima
+**Author:** salamanki
