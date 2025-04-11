@@ -3,4 +3,4 @@ A rookie just hacked your computer. Fortunately, he made a mistake and left some
 
 **Difficulty:** Easy
 
-**Author:** galadima
+**Author:** salamnki
