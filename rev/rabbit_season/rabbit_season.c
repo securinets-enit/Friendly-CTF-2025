@@ -40,8 +40,8 @@ void anti_debug() {
 void loading_bar(const char *message) {
     printf("%s\n", message);
     for (int i = 0; i <= 100; i++) {
-        usleep(50000);  // Simulate work being done
-        printf("\r[%-100s] %d%%", "", i);
+        usleep(10000);  // Simulate work being done
+        printf("\r[%-10s] %d%%", "", i);
         fflush(stdout);
     }
     printf("\n");
@@ -66,7 +66,7 @@ int main() {
 
     // Simulate second loading bar
     loading_bar("I know you do, here youu are:");
-
+    sleep(4);
     // Print fake kernel error
     printf("\nKernel Error: Critical failure during processing...\n");
     sleep(2);  // Simulate a small delay before proceeding
