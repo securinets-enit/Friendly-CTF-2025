@@ -1,0 +1,3 @@
+To this day, the creator and purpose of a famous puzzle remain unknown, sparking theories about secret societies, intelligence recruitment, and online initiation challenges. Your task is to determine how many major puzzles were released, as well as the start and end years.
+
+Use the following flag format: flag{numberOfPuzzles_startYear_endYear}.
