@@ -99,9 +99,13 @@ class Compressor:
             else:
                 pass
                 print(f"[!] Mosh waywa hata tarf.")
+                os.path.exists(TMP_DIR) and __import__('shutil').rmtree(TMP_DIR)
+                exit()
         except Exception as e:
             pass
             print(f"[!] Malla 3amla kalba, manish bsh ncompressi :D")
+            os.path.exists(TMP_DIR) and __import__('shutil').rmtree(TMP_DIR)
+            exit()
 
 def main():
     if len(sys.argv) != 3:

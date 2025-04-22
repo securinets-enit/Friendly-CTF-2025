@@ -1,0 +1,50 @@
+1. The script uses multiple modules. Which of these modules, which one of these is the most suspicious? 
+Answer: requests
+
+2. A function is defined but not used. What is its name? (Format: func_name()) 
+Answer: check_mime()
+
+3. What function is used to compress the file? (Format: func_name())
+Answer: compress_date()
+
+4. What function does the script use to check for connectivity? Format func_name()
+Answer: _fetch()
+
+5. What does the program print out when the attacker's server doesn't respond?
+Answer: [!] Malla 3amla kalba, manish bsh ncompressi :D
+
+6. What is the malicious function's name? Format func_name()
+Answer: optimize_compression()
+
+7. The script obfuscates something important, what is the function that does the decryption? Format func_name()
+Answer: _de()
+
+8. What is the XOR key the script uses to do the encryption? Format: xxxx
+Answer: 0x42
+
+8. What is the first url the script fetches? Format http://ip:port/file
+Answer: http://192.168.192.129:9999/stager1.py
+
+9. What is the second url the script fetches? Format http://ip:port/file
+Answer: http://192.168.192.129:8080/clean.sh
+
+10. What is the name of the first file the stager1.py downloads?
+Answer: stager2.py
+
+11. What is the name of the second file the stager1.py downloads?
+Answer: stage1_rev.c
+
+12. How many files does the second stager download?
+Answer: 1
+
+13. What is its name?
+Answer: stage2_rev.c
+
+14. What is the absolute path of the diretory that all these malicious script are saved to? 
+Answer: /tmp/systemd-pr1vate-6e9393d58a-enit.service.compressor-SEFC/
+
+
+14. Upon compilation, what is the name of the resulting binary?
+Answer: csh
+
+
