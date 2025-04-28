@@ -4,7 +4,7 @@
 The settling began. Jewish people came from all over the world thinking the land was theirs, taking on everyone and everything they evaluate as theirs.
 Palestinians, who were already resentful because of the increasing number of immigrant Jewish settlers, demonstrated in Jerusalem in February 1920. Approximately 1,500 people came on to the streets after the declaration of the enforcement of the Balfour Declaration.
 
-Flag Format: SecurinetsENIT{place-name_year_commision-name_}
+==Flag Format: SecurinetsENIT{place-name_year_commision-name_}==
 
 1- All until a group of rabbis urged Jewish immigrants to gather at a specific place to perform a public prayer. The aim after the call was to seize this place and declare it as a sacred place for Jews. What is this specific place? In what year this stealing attempt happened?
 
