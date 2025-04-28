@@ -4,5 +4,6 @@ Take a step back. Put everything else aside. This may be the most emotionally st
 
 The objective of this series is to immerse you in the realities of Palestine—its history, its struggle, its geopolitics, and its resistance. We hope it educates, moves, and inspires you to learn more.
 
+الله يرحم شهداء القضية.
 
 Flag: SecurinetsENIT{FromTheRiverToTheSeaPalestinneWillBeFree} 
