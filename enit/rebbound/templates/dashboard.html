@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to our site encoding, {{ username }}!</h1>
+<p>Enter a URL to encode its content.</p>
+<p>Your UUID: {{ user_uuid }}</p>
+
+<h3>Your Files:</h3>
+<ul>
+    {% for file in files %}
+    <li><a href="/files/{{ user_uuid }}/{{ file }}" target="_blank">{{ file }}</a></li>
+    {% endfor %}
+</ul>
+
+<h3>Submit a URL</h3>
+<form method="post" action="/submit-url">
+    <input type="url" name="url" placeholder="Enter URL" required />
+    <button type="submit">Submit</button>
+</form>
+
+<form method="post" action="/logout">
+    <button type="submit">Logout</button>
+</form>
+{% endblock %}

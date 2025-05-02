@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    network_mode: "host"
+    env_file:
+      - .sneaky.env
+    volumes:
+      - .:/app
+    user: "1000:1000"
+    read_only: true
+    restart: unless-stopped
+

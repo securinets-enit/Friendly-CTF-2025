@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    env_file:
+      - .sstc.env
+    volumes:
+      - .:/app
+    user: "1000:1000"
+    read_only: true
+    restart: unless-stopped
