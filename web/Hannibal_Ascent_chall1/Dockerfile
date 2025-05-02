@@ -1,30 +1,22 @@
-# Use an official Python runtime as the base image
-FROM python:3.9-slim
+FROM python:3.11-slim
 
-# Set the working directory in the container
+# Don't cache pip installs
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Set work directory
 WORKDIR /app
 
-# Install system dependencies (ping, bash, etc.)
-RUN apt-get update && apt-get install -y \
-    iputils-ping \
-    bash \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy the requirements file into the container
-COPY requirements.txt .
-
-# Install Python dependencies
+# Copy only necessary files
+COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the Flask application code into the container
-COPY . .
+# Copy app files
+COPY app.py .
+COPY templates/ templates/
 
-# Expose port 5000 for the Flask app
-EXPOSE 5000
+# Expose only the challenge port
+EXPOSE 4523
 
-# Set environment variables
-ENV FLASK_APP=app.py
-ENV FLASK_ENV=development
-
-# Run the Flask application
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Run securely using python (not flask CLI)
+CMD ["python", "app.py"]

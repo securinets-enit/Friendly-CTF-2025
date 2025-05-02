@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome, {{ username }}!</h2>
+<p>Your role: <strong>{{ role }}</strong></p>
+
+<div class="card mt-4">
+    <div class="card-header">
+        Your Token Info
+    </div>
+    <div class="card-body">
+        <button id="showToken" class="btn btn-info mb-3">Show My JWT Token</button>
+        <div id="tokenInfo" style="display:none;">
+            <p><strong>Token:</strong> <code id="tokenDisplay"></code></p>
+            <p><a href="https://jwt.io" target="_blank">Inspect this token on jwt.io</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('showToken').addEventListener('click', function() {
+    fetch('/api/userinfo')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('tokenDisplay').textContent = data.token;
+            document.getElementById('tokenInfo').style.display = 'block';
+        });
+});
+</script>
+{% endblock %}

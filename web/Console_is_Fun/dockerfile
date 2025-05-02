@@ -1,0 +1,25 @@
+FROM python:3.11-slim
+
+# Create non-root user
+RUN useradd -m ctfuser
+
+# Set working directory
+WORKDIR /home/ctfuser/app
+
+# Copy challenge files
+COPY challenge/ .
+
+# Install Flask (optional)
+RUN pip install --no-cache-dir flask gunicorn
+
+# Set permissions
+RUN chown -R ctfuser:ctfuser /home/ctfuser
+
+# Drop to non-root user
+USER ctfuser
+
+# Expose port for CTFd
+EXPOSE 8000
+
+# Start the Flask app using gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]

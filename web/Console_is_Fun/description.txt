@@ -1,0 +1,6 @@
+challenge name: Console_is_FUN
+dificulty: Easy
+A strange button sits quietly on the screen.
+Once you click it, it vanishes into thin air.
+No flag in the source code. No secrets in the HTML.
+But the web console whispers secrets to those who know where to look...

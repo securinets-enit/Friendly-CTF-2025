@@ -1,0 +1,4 @@
+challenge name: CustomBrowser
+dificulty: easy
+Our secret agents use a special browser to access this internal service.
+The server doesn’t like strangers. If you’re not using our custom browser, you’re denied access.

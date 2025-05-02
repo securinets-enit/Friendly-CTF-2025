@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="portal-container">
+    <div class="portal-header">
+        <h1 class="portal-title">Welcome to the Employee Portal</h1>
+        <div class="portal-divider"></div>
+    </div>
+
+    <div class="portal-card">
+        <div class="card-body">
+            <p class="portal-welcome">Access your work resources and tools</p>
+
+            <div class="portal-actions">
+                <a href="/login" class="btn btn-primary portal-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+                <a href="/register" class="btn btn-secondary portal-btn">
+                    <i class="fas fa-user-plus"></i> Register
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="portal-notices">
+        <div class="notice notice-info">
+            <i class="fas fa-info-circle"></i>
+            <p>This website is under construction. Contact admin at <span class="highlight">admin@notgmail.com</span></p>
+        </div>
+
+        <div class="notice notice-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Developers: Complete the website ASAP we are waiting, it's a mess, my old admin endpoint doesn't work</p>
+        </div>
+
+        <div class="notice notice-error">
+            <i class="fas fa-shield-alt"></i>
+            <p>To security researchers: We're a small startup - please report any findings responsibly.Don't hack us </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    :root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --dark-color: #2c3e50;
+        --light-color: #ecf0f1;
+        --info-color: #3498db;
+        --warning-color: #f39c12;
+        --error-color: #e74c3c;
+    }
+
+    .portal-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .portal-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .portal-title {
+        color: var(--dark-color);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .portal-divider {
+        height: 3px;
+        width: 100px;
+        background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        margin: 0 auto;
+        border-radius: 3px;
+    }
+
+    .portal-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .portal-welcome {
+        color: var(--dark-color);
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .portal-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .portal-btn {
+        padding: 0.7rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background-color: white;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+    }
+
+    .btn-secondary:hover {
+        background-color: #f8f9fa;
+        transform: translateY(-2px);
+    }
+
+    .portal-notices {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .notice {
+        padding: 1rem;
+        border-radius: 6px;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .notice i {
+        font-size: 1.2rem;
+        margin-top: 0.2rem;
+    }
+
+    .notice-info {
+        background-color: rgba(52, 152, 219, 0.1);
+        border-left: 4px solid var(--info-color);
+        color: var(--dark-color);
+    }
+
+    .notice-warning {
+        background-color: rgba(243, 156, 18, 0.1);
+        border-left: 4px solid var(--warning-color);
+        color: var(--dark-color);
+    }
+
+    .notice-error {
+        background-color: rgba(231, 76, 60, 0.1);
+        border-left: 4px solid var(--error-color);
+        color: var(--dark-color);
+    }
+
+    .highlight {
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    @media (max-width: 600px) {
+        .portal-actions {
+            flex-direction: column;
+        }
+    }
+</style>
+{% endblock %}

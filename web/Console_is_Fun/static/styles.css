@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 80px;
+  background-color: #f0f0f0;
+}
+
+#hidden-btn {
+  position: absolute;
+  left: -9999px; /* Hidden off-screen */
+  top: 200px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#flag {
+  margin-top: 50px;
+  font-size: 22px;
+  color: darkgreen;
+  font-weight: bold;
+}

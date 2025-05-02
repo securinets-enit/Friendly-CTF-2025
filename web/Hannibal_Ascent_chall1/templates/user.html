@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="mb-4">
+        <a href="/ping" class="btn btn-sm btn-secondary mb-3">
+            <i class="bi bi-arrow-left"></i> Back to Ping
+        </a>
+        <h3>User Information</h3>
+
+        {% if username %}
+            <div class="card glass-card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">User #{{ user_id }}</h5>
+                    <p class="card-text">Username: <strong>{{ username }}</strong></p>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-warning">
+                No user found with ID: {{ user_id }}
+            </div>
+        {% endif %}
+
+        {% if error %}
+            <div class="alert alert-danger">
+                <h5>Database Error</h5>
+                <pre class="mb-0">{{ error }}</pre>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+challenge name : RobotBetray
+dificulty: easy
+You’ve stumbled upon a live production employee portal still exposed to the internet.
+Most of the interface looks clean and well-guarded, but developers often forget that true security is more than just hiding things.
+
+Access beyond this point is restricted — or at least, it’s supposed to be.
+
+Think like a hacker. Poke around. Find something that wasn’t meant for you.

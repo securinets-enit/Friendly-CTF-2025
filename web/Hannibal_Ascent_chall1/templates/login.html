@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST">
+        <div class="mb-3">
+            <label for="username" class="form-label"><i class="bi bi-person-fill"></i> Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label"><i class="bi bi-lock-fill"></i> Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 mb-3">
+            <i class="bi bi-box-arrow-in-right"></i> Login
+        </button>
+    </form>
+
+    {% if error %}
+    <div class="alert alert-danger mt-3">{{ error }}</div>
+    {% endif %}
+{% endblock %}
