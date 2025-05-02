@@ -34,7 +34,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        # 💀 Vulnerable query (intended for SQLi)
+        #  Vulnerable query (intended for SQLi)
         query = f"SELECT * FROM users WHERE username='{username}' AND password='{password}'"
 
         conn = sqlite3.connect(DB_PATH)
@@ -50,7 +50,7 @@ def login():
             else:
                 error = "Invalid credentials!"
         except sqlite3.Error as e:
-            # ✅ Show the exact query AND the error — to encourage error-based SQLi
+            # Show the exact query AND the error — to encourage error-based SQLi
             error = f"Database error: {e}<br><code>{query}</code>"
             conn.close()
 
@@ -122,4 +122,4 @@ def get_user(user_id):
 init_db()
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=4523, debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)

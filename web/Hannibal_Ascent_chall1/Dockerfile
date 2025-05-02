@@ -1,22 +1,31 @@
+# Use a slim Python image
 FROM python:3.11-slim
 
-# Don't cache pip installs
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    iputils-ping \
+ && rm -rf /var/lib/apt/lists/*
 
-# Set work directory
+# Create a user to avoid running as root
+RUN useradd -m ctfuser
+
+# Set working directory
 WORKDIR /app
 
-# Copy only necessary files
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
 # Copy app files
-COPY app.py .
-COPY templates/ templates/
+COPY . /app
 
-# Expose only the challenge port
-EXPOSE 4523
+# Install Flask
+RUN pip install --no-cache-dir flask
 
-# Run securely using python (not flask CLI)
+# Ensure proper permissions
+RUN chown -R ctfuser:ctfuser /app
+
+# Switch to non-root user
+USER ctfuser
+
+# Expose the app port
+EXPOSE 5000
+
+# Run the app
 CMD ["python", "app.py"]
