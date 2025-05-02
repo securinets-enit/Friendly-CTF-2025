@@ -1,5 +1,5 @@
 Nothing to be said...
 
-Difficulty: Easy Author: Yarruma
+**Difficulty:** Easy        **Author:** Yarruma
 
 #Steganography
