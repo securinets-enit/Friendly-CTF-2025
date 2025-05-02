@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  challenge-ctfuser:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1008:8000"
+    container_name: challenge-ctfuser-1008
+    restart: unless-stopped

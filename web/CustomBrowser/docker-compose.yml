@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build:
+      context: ..
+      dockerfile: ../Dockerfile
+    ports:
+      - "1007:5000"
+    container_name: flask-challenge-app
+    restart: unless-stopped

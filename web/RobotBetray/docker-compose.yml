@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  robotsbetray:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1009:5000"
+    container_name: robotsbetray-1009
+    restart: unless-stopped

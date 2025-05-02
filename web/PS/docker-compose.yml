@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  flask-challenge:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "1006:5000"
+    container_name: flask-gunicorn-challenge
+    restart: unless-stopped
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
