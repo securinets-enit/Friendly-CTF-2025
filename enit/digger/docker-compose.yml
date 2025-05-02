@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  digger:
+    build: .
+    ports:
+      - "5000:5000"
+    container_name: digger
+    user: "1000:1000"
+    read_only: true
+    restart: unless-stopped

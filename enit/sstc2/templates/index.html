@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Custom Encryption Service</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Custom Encryption Service</h1>
+    <form method="post">
+      <textarea name="text" rows="4" cols="50">{{ original }}</textarea><br>
+      <button type="submit">Encrypt</button>
+    </form>
+
+    {% if encrypted_text %}
+    <div class="results">
+      <h2>Results</h2>
+      <p><strong>Original:</strong> {{ original }}</p>
+      <p><strong>Encrypted you:</strong> {{ encrypted_text }}</p>
+      <p><strong>Encrypted flag:</strong> {{ encrypted_flag }}</p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>

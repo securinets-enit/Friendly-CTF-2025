@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    user: "1000:1000"
+    readonly: true
+    volumes:
+      - .:/app
+    environment:
+      FLASK_ENV: production
+    networks:
+      - flask-network  # Keep this if you want a custom network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '225M'
+      restart: unless-stopped
+
+networks:
+  flask-network:
+    driver: bridge

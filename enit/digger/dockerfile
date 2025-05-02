@@ -1,0 +1,25 @@
+# Use official Python base image
+FROM python:3.10-slim
+
+RUN adduser --disabled-password --gecos '' --uid 1000 appuser
+
+# Install required system packages
+RUN apt-get update && apt-get install -y dnsutils && rm -rf /var/lib/apt/lists/*
+
+# Set work directory
+WORKDIR /app
+
+# Copy app files into container
+COPY . .
+
+# Install Flask
+RUN pip install flask
+
+# Expose the Flask port
+EXPOSE 5000
+
+USER appuser
+
+# Run the app
+CMD ["python", "app.py"]
+
